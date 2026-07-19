@@ -18,6 +18,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="dark">
+      <head>
+        <meta name="google-site-verification" content="C2Q6VehRrLLNDnM8E7AKGMSwd2vGdgIQebyoVk70AnA" />
+      </head>
       <body>
         <ThemeProvider>
           <LanguageProvider>
