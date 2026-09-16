@@ -6,6 +6,7 @@ import { useState } from 'react'
 import { Play } from 'lucide-react'
 import BeforeAfterSlider from '@/components/BeforeAfterSlider'
 import { useT } from '@/lib/LanguageProvider'
+import { socialUrls } from '@/lib/siteConfig'
 
 const fadeUp = {
   hidden: { opacity: 0, y: 40 },
@@ -57,7 +58,7 @@ export default function Portfolio() {
               onClick={() => setActiveTab(tab)}
               className={`px-6 py-2.5 text-xs tracking-[0.15em] uppercase transition-all duration-500 ${
                 activeTab === tab
-                  ? 'bg-brand-gold/90 text-[#0B1F1A]'
+                  ? 'bg-brand-gold/90 text-[#0d0c0b]'
                   : 'bg-surface/60 text-secondary hover:text-brand-gold/80 border border-subtle hover:border-brand-gold/20'
               }`}
             >
@@ -73,7 +74,7 @@ export default function Portfolio() {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
             {filteredItems.map((item, idx) => (
               <motion.div key={item.id} custom={idx} variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }} className="relative aspect-square overflow-hidden group cursor-pointer">
-                <Image src={item.image} alt={`Portfolio ${item.id}`} fill className="object-cover transition-all duration-700 group-hover:scale-110" />
+                <Image src={item.image} alt={`Portfolio ${item.id}`} fill className="object-cover dark:object-contain dark:bg-[#171411] transition-all duration-700 group-hover:scale-110 dark:group-hover:scale-100" />
                 <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                 <div className="absolute bottom-0 left-0 right-0 p-5 translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
                   <span className="text-xs tracking-[0.15em] uppercase text-brand-gold/80">{item.category}</span>
@@ -121,10 +122,10 @@ export default function Portfolio() {
           <div className="grid md:grid-cols-3 gap-6">
             {[1, 2, 3].map((vid, idx) => (
               <motion.div key={vid} custom={idx + 1} variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }} className="group relative aspect-[9/16] bg-surface overflow-hidden cursor-pointer">
-                <Image src={`https://images.unsplash.com/photo-${idx === 0 ? '1529626455599-4ff0808664d5' : idx === 1 ? '1515886657613-9f351fe9c7c3' : '1479969268471-c0f7b5e6eeb6'}?q=80&w=1974`} alt="Video thumbnail" fill className="object-cover opacity-60 group-hover:opacity-40 transition-opacity duration-500" />
+                <Image src={`https://images.unsplash.com/photo-${idx === 0 ? '1529626455599-4ff0808664d5' : idx === 1 ? '1515886657613-9f351fe9c7c3' : '1479969268471-c0f7b5e6eeb6'}?q=80&w=1974`} alt="Video thumbnail" fill className="object-cover dark:object-contain dark:bg-[#171411] opacity-60 group-hover:opacity-40 transition-opacity duration-500" />
                 <div className="absolute inset-0 flex items-center justify-center">
                   <div className="w-14 h-14 rounded-full border-2 border-brand-gold/60 flex items-center justify-center group-hover:bg-brand-gold/90 transition-all duration-500">
-                    <Play size={20} className="text-brand-gold/80 group-hover:text-[#0B1F1A] ml-0.5 transition-colors" />
+                    <Play size={20} className="text-brand-gold/80 group-hover:text-[#0d0c0b] ml-0.5 transition-colors" />
                   </div>
                 </div>
                 <div className="absolute bottom-0 left-0 right-0 p-5 bg-gradient-to-t from-primary/80 to-transparent">
@@ -134,7 +135,7 @@ export default function Portfolio() {
             ))}
           </div>
           <motion.div custom={4} variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }} className="text-center mt-14">
-            <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" className="btn-secondary">{t.portfolio.tiktokBtn}</a>
+            <a href={socialUrls.tiktok} target="_blank" rel="noopener noreferrer" className="btn-secondary">{t.portfolio.tiktokBtn}</a>
           </motion.div>
         </div>
       </section>

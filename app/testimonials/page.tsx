@@ -49,7 +49,7 @@ export default function Testimonials() {
                 <Quote className="w-8 h-8 text-brand-gold/[0.06] absolute top-5 right-5" />
                 <div className="flex items-center gap-4 mb-6">
                   <div className="relative w-12 h-12 rounded-full overflow-hidden border border-brand-gold/10">
-                    <Image src={item.image} alt={item.name} fill className="object-cover" />
+                    <Image src={item.image} alt={item.name} fill className="object-cover dark:object-contain dark:bg-[#171411]" />
                   </div>
                   <div>
                     <h3 className="font-semibold text-sm text-primary">{item.name}</h3>

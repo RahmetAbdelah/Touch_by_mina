@@ -5,10 +5,14 @@ import Footer from '@/components/Footer'
 import WhatsAppButton from '@/components/WhatsAppButton'
 import { ThemeProvider } from '@/lib/ThemeProvider'
 import { LanguageProvider } from '@/lib/LanguageProvider'
+import { JsonLd } from './jsonld'
+import { siteMetadata } from './metadata'
 
-export const metadata: Metadata = {
-  title: 'Touch By Mina | Luxury Makeup Artist in Addis Ababa',
-  description: 'Professional makeup artist specializing in bridal, event, and photoshoot makeup. Based in Addis Ababa, Ethiopia.',
+export const metadata: Metadata = siteMetadata
+
+export const viewport = {
+  themeColor: '#f7f1ea',
+  colorScheme: 'light dark',
 }
 
 export default function RootLayout({
@@ -17,11 +21,9 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className="dark">
-      <head>
-        <meta name="google-site-verification" content="C2Q6VehRrLLNDnM8E7AKGMSwd2vGdgIQebyoVk70AnA" />
-      </head>
+    <html lang="en">
       <body>
+        <JsonLd />
         <ThemeProvider>
           <LanguageProvider>
             <Navigation />

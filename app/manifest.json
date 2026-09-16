@@ -1,0 +1,9 @@
+{
+  "name": "Touch By Mina - Luxury Makeup Artist",
+  "short_name": "Touch By Mina",
+  "description": "Professional makeup artist specializing in bridal, event, and photoshoot makeup in Addis Ababa, Ethiopia",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f7f1ea",
+  "theme_color": "#d7ad61"
+}

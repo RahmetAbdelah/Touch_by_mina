@@ -22,7 +22,7 @@ export default function About() {
     <>
       <section className="relative h-[70vh] min-h-[500px] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
-          <Image src="https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?q=80&w=2070" alt="Makeup artist at work" fill className="object-cover object-center scale-105" priority />
+          <Image src="https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?q=80&w=2070" alt="Makeup artist at work" fill className="object-cover object-center dark:object-contain dark:bg-[#171411] scale-105 dark:scale-100" priority />
           <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/70 to-primary/80" />
           <div className="absolute inset-0 bg-subtle-grid" />
         </div>

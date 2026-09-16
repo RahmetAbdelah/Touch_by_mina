@@ -10,11 +10,11 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        'brand-green': '#1a4d2e',
-        'brand-dark-green': '#0B1F1A',
-        'brand-surface': '#112A24',
-        'brand-gold': '#d4af37',
-        'brand-light-gold': '#f4e4b4',
+        'brand-green': '#0d0c0b',
+        'brand-dark-green': '#090807',
+        'brand-surface': '#181511',
+        'brand-gold': '#d7ad61',
+        'brand-light-gold': '#f0cf91',
       },
       backgroundColor: {
         primary: 'var(--bg-primary)',
