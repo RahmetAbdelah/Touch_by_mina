@@ -20,7 +20,7 @@ export default function Error({
         <h1 className="text-6xl font-bold text-brand-gold mb-4">Oops!</h1>
         <h2 className="text-2xl font-bold mb-4">Something went wrong</h2>
         <p className="text-secondary mb-8">
-          We're sorry, but something unexpected happened. Please try again.
+          We&apos;re sorry, but something unexpected happened. Please try again.
         </p>
         <div className="flex gap-4 justify-center">
           <button
